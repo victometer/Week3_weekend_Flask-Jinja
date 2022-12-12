@@ -1,0 +1,15 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>{{ title }} -  Book List</title>
+</head>
+
+<body>
+    <ul>
+    </ul>
+    <hr>
+    {% block content %}{% endblock %}
+</body>
+
+</html>

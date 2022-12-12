@@ -1,0 +1,50 @@
+body {
+    background-color: #dfde9d;
+}
+
+h1 {
+    text-align: center;
+}
+.book {
+    display: inline-block;
+    width: 200px;
+    background-color: #638b93;
+    padding: 10px;
+    margin: 20px;
+    border-radius: 5%;
+    text-align: center;
+    color: white;
+    
+}
+.form-inline input[type=submit] {
+    padding: 10px 20px ;
+    background-color: #171A21;
+    border: 1px solid #ddd;
+    color: white;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.form-inline input[type=submit]:hover {
+    background-color: darkgray;
+}
+.form-inline input[type=text] {
+    padding: 10px 20px ;
+
+}
+
+label {
+    text-decoration: underline;
+}
+
+.book a:hover {
+    color: rgb(162, 182, 198);
+    
+}
+.book a {
+    color: aliceblue;
+}
+    
+.form-inline {
+    padding: 20px;
+}
+

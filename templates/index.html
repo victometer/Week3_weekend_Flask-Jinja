@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Book List</h1>
+
+<h2> Check your book in/out </h2>
+<form class="form-inline" action="/books" method="post">
+    <label for="title">Title</label>
+    <input type="text" name="title" id="title">
+    <label for="genre">Genre</label>
+    <input type="text" name="genre" id="genre">
+    <label for="author">Author</label>
+    <input type="text" name="author" id="author">
+    <!-- <label for="description">Description</label>
+    <textarea name="description" rows="2" cols="30"></textarea> -->
+    <input type="submit" value="Add book">
+</form>
+<div class="book-list">
+{% for book in books %}
+<div class="book">
+    <h3>{{ book.title }}</h3>
+    <h4> - {{ book.genre }}</h4>
+    <h4>{{ book.author }}</h4>
+    <a href="http://localhost:4999/{{loop.index0}}"> More about {{book.title}}</a>
+    <form class="form-inline" action="/books/delete/{{ loop.index0 }}" method="POST">
+        <input type="submit" value="Delete">
+    </form>
+</div>
+{% endfor %}
+</div>
+{% endblock %}
